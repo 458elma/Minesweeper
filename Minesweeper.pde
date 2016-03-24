@@ -68,7 +68,7 @@ public void displayLosingMessage()
     buttons[10][10].setLabel("O");
     buttons[10][11].setLabel("S");
     buttons[10][12].setLabel("E");
-    noLoop();
+    //noLoop();
 }
 public void displayWinningMessage()
 {
@@ -80,7 +80,7 @@ public void displayWinningMessage()
     buttons[10][10].setLabel("I");
     buttons[10][11].setLabel("N");
     
-    noLoop();
+    //noLoop();
 }
 
 public class MSButton
