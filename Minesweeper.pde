@@ -8,6 +8,7 @@ private MSButton[][] buttons; //2d array of minesweeper buttons
 private ArrayList <MSButton> bombs = new ArrayList <MSButton>(); //ArrayList of just the minesweeper buttons that are mined
 private int ding = 0;
 private int bomby = 15;
+private boolean gameOver = false;
 void setup ()
 {
     size(400, 400);
@@ -44,6 +45,8 @@ public void draw ()
     
     if(isWon())
         displayWinningMessage();
+    if(gameOver == true) 
+       return;
 }
 public boolean isWon()
 {
@@ -55,8 +58,8 @@ public boolean isWon()
               return true;   
       }
     }
-    
     return false;
+    
 }
 public void displayLosingMessage()
 {
@@ -69,6 +72,7 @@ public void displayLosingMessage()
     buttons[10][11].setLabel("S");
     buttons[10][12].setLabel("E");
     //noLoop();
+    gameOver = true;
 }
 public void displayWinningMessage()
 {
@@ -79,7 +83,7 @@ public void displayWinningMessage()
     buttons[10][9].setLabel("W");
     buttons[10][10].setLabel("I");
     buttons[10][11].setLabel("N");
-    
+    gameOver = true;
     //noLoop();
 }
 
